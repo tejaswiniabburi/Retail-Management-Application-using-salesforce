@@ -1,0 +1,13 @@
+trigger toavoidduplicates on Account (before insert) {
+
+    
+
+    if(trigger.isBefore){
+
+        ToAvoidDuplicateHandler.preventDuplicate(trigger.new);
+
+    }
+
+
+
+}
